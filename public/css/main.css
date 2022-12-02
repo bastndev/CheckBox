@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1b1c23;
+    /* color: #fff; */
+}
+/* Design */
+section
+{
+    width: 100vmin;
+    height: 100vh;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.title
+{
+    width: 170px;
+    height: 200px;
+    position: relative;
+    /* border: 1px solid #fff; */
+}
+/* Cajon - box */
+input[type="checkbox"]
+{
+    -webkit-appearance: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    outline: none;
+    box-shadow: 15px 15px 25px rgba(2,28,53,0.05);
+}
+input[type="checkbox"]::after
+{
+    position: absolute;
+    font-family: "Font awesome 5 Free";
+    font-weight: 400;
+    content: "\f111";
+    font-size: 22px;
+    top: 10px;
+    left: 10px;
+    color: #ffe100;
+}
+input[type="checkbox"]:hover
+{
+    transform: scale(1.08);
+}
+input[type="checkbox"]:checked
+{
+    border: 3px solid#ffe100;
+}
+input[type="checkbox"]:checked::after
+{
+    font-weight: 900;
+    content:"\e4fd" ;
+}
+/* Icon Animation */
+label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+label .fa-solid
+{
+    font-size: 60px;
+    color:  rgb(255, 0, 43);
+}
+input[type="checkbox"]:checked +label .fa-solid
+{
+    animation: grow 0.5s;
+}
+/* Animation */
+@keyframes grow{
+    50%{
+        font-size: 80px;
+    }
+}
+/* Lyric */
+label h6
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #4f4e4e;
+}
